@@ -5,11 +5,12 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "start": "node src/server.js",
-    "dev": "nodemon src/server.js",
-    "dev:proxy": "nodemon src/server.ts",
+    "start": "npm run build && node dist/src/index.js",
     "screenshot": "npm run build && node dist/src/examples/screenshot.js",
-    "crawl": "npm run build && node dist/src/examples/crawl.js"
+    "crawl": "npm run build && node dist/src/examples/crawl.js",
+    "dev": "ts-node src/index.ts",
+    "start:proxy": "node src/server.js",
+    "dev:proxy": "npx nodemon src/server.js"
   },
   "author": "",
   "license": "MIT",
