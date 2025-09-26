@@ -8,18 +8,27 @@
     "start": "npm run build && node dist/src/index.js",
     "screenshot": "npm run build && node dist/src/examples/screenshot.js",
     "crawl": "npm run build && node dist/src/examples/crawl.js",
-    "dev": "ts-node src/index.ts"
+    "dev": "ts-node src/index.ts",
+    "start:proxy": "node src/server.js",
+    "dev:proxy": "npx nodemon src/server.js"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "cheerio": "^1.0.0",
+    "dotenv": "^17.2.2",
+    "express": "^4.19.0",
+    "http-proxy-middleware": "^2.0.6",
+    "puppeteer": "^21.0.0",
     "puppeteer-extra": "^3.3.6",
-    "puppeteer-extra-plugin-stealth": "^2.11.2",
-    "puppeteer": "^21.0.0"
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
   },
   "devDependencies": {
-    "typescript": "^5.3.0",
+    "@types/cheerio": "^0.22.35",
+    "@types/express": "^4.17.23",
+    "@types/http-proxy-middleware": "^0.19.3",
+    "@types/node": "^20.0.0",
     "ts-node": "^10.9.1",
-    "@types/node": "^20.0.0"
+    "typescript": "^5.3.0"
   }
 }
