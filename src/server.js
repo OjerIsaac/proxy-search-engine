@@ -14,7 +14,7 @@ const cheerio = require("cheerio");
 puppeteer.use(StealthPlugin());
 
 const APP_PORT = process.env.PORT || 3000;
-const TARGET = process.env.TARGET || "https://www.google.com";
+const TARGET = process.env.TARGET || "https://nslookup.io";
 const TARGET_HOST = new URL(TARGET).host;
 const MAX_RENDER_CONCURRENCY =
   parseInt(process.env.MAX_RENDER_CONCURRENCY, 10) || 3;
